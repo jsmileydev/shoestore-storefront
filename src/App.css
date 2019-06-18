@@ -9,3 +9,24 @@
 .tab-content {
   margin-top: 50px;
 }
+
+.list-group-item.active {
+  background-color: #595c5f  !important;
+  border-color: #595c5f  !important;
+} 
+
+.card-body {
+  padding: .75rem !important;
+}
+
+.badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+}
+
+.badge:hover {
+  background-color: #000;
+}
+

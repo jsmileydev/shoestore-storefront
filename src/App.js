@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import {Navhead} from './navhead';
-import {ShopGrid} from './shop-grid';
-import { Footer } from './footer';
+import Navbar from './navbar';
+import ShopGrid from './shop-grid';
+import Footer from './footer';
 
 function App() {
 	return (
 		<div className="App">
-			<Navhead />
-      <ShopGrid/>
+			<Navbar />
+			<ShopGrid />
 			<Footer />
 		</div>
 	);
