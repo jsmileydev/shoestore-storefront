@@ -1,17 +1,16 @@
 import React from 'react';
+import ProductCard from './product-card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Tab from 'react-bootstrap/Tab';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
 class ShopGrid extends React.Component {
-
 	render() {
 		return (
 			<main>
@@ -33,35 +32,73 @@ class ShopGrid extends React.Component {
 								</ListGroup.Item>
 							</ListGroup>
 						</Col>
-						<Col xl={9} lg={8} md={8} sm={12} className="m-auto bg-light">
+						<Col xl={9} lg={8} md={8} sm={12} className="mx-auto bg-light">
 							<Tab.Content className="m-5 text-left">
-								<Tab.Pane eventKey="#cat1" className="d-flex justify-content-around">
-									<Card style={{ width: '14rem' }} className="rounded-lg shadow-sm border-0">
-										<Card.Img variant="top" src={require("./images/sq-mens-dress-blk.png")} />
-                                        <Badge variant="secondary" className="rounded-circle"><FontAwesomeIcon icon={faHeart} /></Badge>
-										<Card.Body>
-											<Card.Text className="my-1">Square Toe Lace-up</Card.Text>
-											<small className="text-muted text-sm">
-                                                Men's Dress Shoe
-											</small>
-                                            <Card.Text className="my-1">
-                                                <strike className="text-muted">$150</strike> <span className="text-info font-weight-bold"> $100</span>
-                                            </Card.Text>
-										</Card.Body>
-									</Card>
-									<Card style={{ width: '14rem' }} className="rounded-lg shadow-sm border-0">
-										<Card.Img variant="top" src={require("./images/sq-womens-boot-blk-heel.png")} />
-                                        <Badge variant="secondary" className="rounded-circle"><FontAwesomeIcon icon={faHeart} /></Badge>
-										<Card.Body>
-											<Card.Text className="my-1">Heeled Ankle Boot</Card.Text>
-											<small className="text-muted text-sm">
-                                                Women's Boots
-											</small>
-                                            <Card.Text className="my-1">
-                                                <strike className="text-muted">$150</strike> <span className="text-info font-weight-bold"> $100</span>
-                                            </Card.Text>
-										</Card.Body>
-									</Card>
+								<Tab.Pane eventKey="#cat1">
+									<Row>
+										<Col className="w-100 mx-auto my-3" xl={4} lg={6} sm={6}>
+											<Card className="rounded-lg h-100 shadow-sm border-0 mx-auto">
+												<Card.Img
+													variant="top"
+													src={require('./images/horz-mens-dress-dkbrn-sit.jpg')}
+												/>
+												<Badge variant="secondary" className="rounded-circle">
+													<FontAwesomeIcon icon={farHeart} />
+												</Badge>
+												<Card.Body>
+													<Card.Text className="my-1">Cap Toe Lace-up</Card.Text>
+													<small className="text-muted text-sm">Men's Dress Shoe</small>
+													<Card.Text className="my-1">
+														<strike className="text-muted">$150</strike>{' '}
+														<span className="text-info font-weight-bold"> $100</span>
+													</Card.Text>
+												</Card.Body>
+											</Card>
+										</Col>
+
+										<Col className="w-100 mx-auto my-3" xl={4} lg={6} sm={6}>
+											<Card className="rounded-lg shadow-sm border-0 h-100 mx-auto">
+												<Card.Img
+													variant="top"
+													src={require('./images/horz-womens-boot-heel.jpg')}
+												/>
+												<Badge variant="secondary" className="rounded-circle">
+													<FontAwesomeIcon icon={farHeart} />
+												</Badge>
+												<Card.Body>
+													<Card.Text className="my-1">Heeled Ankle Boot</Card.Text>
+													<small className="text-muted text-sm">Women's Boots</small>
+													<Card.Text className="my-1">
+														<strike className="text-muted">$150</strike>{' '}
+														<span className="text-info font-weight-bold"> $100</span>
+													</Card.Text>
+												</Card.Body>
+											</Card>
+										</Col>
+
+										<Col className="w-100 mx-auto my-3" xl={4} lg={6} sm={6}>
+											<Card className="rounded-lg shadow-sm h-100 border-0 mx-auto">
+												<Card.Img
+													variant="top"
+													src={require('./images/horz-mens-boot-brn.jpg')}
+												/>
+												<Badge variant="secondary" className="rounded-circle">
+													<FontAwesomeIcon icon={farHeart} />
+												</Badge>
+												<Card.Body>
+													<Card.Text className="my-1">Ankle Dress Boot</Card.Text>
+													<small className="text-muted text-sm">
+														Men's Boots, Men's Dress Shoes
+													</small>
+													<Card.Text className="my-1">
+														<strike className="text-muted">$150</strike>{' '}
+														<span className="text-info font-weight-bold"> $100</span>
+													</Card.Text>
+												</Card.Body>
+											</Card>
+										</Col>
+										<ProductCard/>
+									</Row>
 								</Tab.Pane>
 
 								<Tab.Pane eventKey="#cat2">

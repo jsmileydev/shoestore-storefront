@@ -1,6 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 
-export class Navbar extends React.Component {
+class Navbar extends React.Component {
     render() {
         return (
             <header className="container">
@@ -37,9 +39,14 @@ export class Navbar extends React.Component {
                         <a className="navbar-brand" href="#">
                             <img src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-shopping-cart-64.png" width="40" alt="Shopping cart icon"/>
                         </a>
+                        <a className="navbar-brand" href="#">
+                            <FontAwesomeIcon icon={faUser} size="lg" />
+                        </a>
                     </div>
                 </nav>
             </header>
         );
     };
 }
+
+export default Navbar;
