@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from './product-card';
+import productArr from './product-arr';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -8,10 +9,18 @@ import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
-import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
 class ShopGrid extends React.Component {
 	render() {
+		const ProductMap = productArr.map((product) => (
+			<ProductCard
+				name={product.name}
+				category={product.category}
+				price={product.price}
+				salePrice={product.salePrice}
+				img={product.img}
+			/>
+		));
 		return (
 			<main>
 				<Tab.Container fluid={true} id="list-group-tabs-example" defaultActiveKey="#cat1">
@@ -36,6 +45,7 @@ class ShopGrid extends React.Component {
 							<Tab.Content className="m-5 text-left">
 								<Tab.Pane eventKey="#cat1">
 									<Row>
+										{/*
 										<Col className="w-100 mx-auto my-3" xl={4} lg={6} sm={6}>
 											<Card className="rounded-lg h-100 shadow-sm border-0 mx-auto">
 												<Card.Img
@@ -96,8 +106,8 @@ class ShopGrid extends React.Component {
 													</Card.Text>
 												</Card.Body>
 											</Card>
-										</Col>
-										<ProductCard/>
+										</Col>*/}
+										{ProductMap}
 									</Row>
 								</Tab.Pane>
 

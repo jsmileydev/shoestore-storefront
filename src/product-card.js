@@ -24,23 +24,21 @@ class ProductCard extends React.Component {
     }
     
     handleLike() {
-        this.setState({
-            filled: !this.state.filled
-        });
+        this.setState({ filled: !this.state.filled });
     };
 
 	render() {
 		return (
 			<Col className="w-100 mx-auto my-3" xl={4} lg={6} sm={6}>
 				<Card className="rounded-lg h-100 shadow-sm border-0 mx-auto">
-					<Card.Img variant="top" src={require('./images/horz-mens-dress-dkbrn-sit.jpg')} />
+					<Card.Img variant="top" src={require(`${this.props.img}`)} />
                     <Heart filled={this.state.filled} onClick={this.handleLike}/>
 					<Card.Body>
-						<Card.Text className="my-1">Cap Toe Lace-up</Card.Text>
-						<small className="text-muted text-sm">Men's Dress Shoe</small>
+						<Card.Text className="my-1">{this.props.name}</Card.Text>
+						<small className="text-muted text-sm">{this.props.category}</small>
 						<Card.Text className="my-1">
-							<strike className="text-muted">$150</strike>{' '}
-							<span className="text-info font-weight-bold"> $100</span>
+							<strike className="text-muted">{this.props.price}</strike>{' '}
+							<span className="text-info font-weight-bold"> {this.props.salePrice}</span>
 						</Card.Text>
 					</Card.Body>
 				</Card>
