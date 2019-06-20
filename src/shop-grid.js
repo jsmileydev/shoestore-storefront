@@ -10,6 +10,7 @@ class ShopGrid extends React.Component {
 	render() {
 		const ProductMap = productArr.map((product) => (
 			<ProductCard
+				key={product.id}
 				name={product.name}
 				category={product.category}
 				price={product.price}
