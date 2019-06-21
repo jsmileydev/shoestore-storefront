@@ -7,10 +7,11 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
+import productArr from './product-arr';
 
 const Heart = ({ filled, onClick }) => {
 	return (
-		<Badge variant="secondary" className="rounded-circle" onClick={onClick}>
+		<Badge variant="secondary" className="heart rounded-circle" onClick={onClick}>
 			<FontAwesomeIcon icon={filled ? fasHeart : farHeart} />
 		</Badge>
 	);
@@ -20,27 +21,19 @@ class ProductCard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			filled: false,
-			colors: ''
+			filled: false
 		};
 		this.handleLike = this.handleLike.bind(this);
-		this.showColors = this.showColors.bind(this);
 	}
 
 	handleLike() {
 		this.setState({ filled: !this.state.filled });
 	}
 
-	showColors() {
-		for (let index = 0; index < this.props.colors.length; index++) {
-			const element = this.props.colors[index];
-			this.setState({
-				colors: element
-			})
-		}
-	}
-
 	render() {
+		{/*const ColorChoice = this.props.colors.map((color) => (
+			<span className="color-circle d-inline-block mx-.5" key={color.colors} style={{backgroundColor: `${color.colors}` }} > {color.colors} </span>
+		));*/}
 		return (
 			<Col className="w-100 mx-auto mb-5" xl={4} lg={6} sm={6}>
 				<Card className="rounded-lg h-100 shadow-sm border-0 mx-auto">
@@ -63,7 +56,7 @@ class ProductCard extends React.Component {
 						<Card.Text className="my-1">
 							<strike className="text-muted">{this.props.price}</strike>{' '}
 							<span className="text-primary font-weight-bold"> {this.props.salePrice}</span>
-							<span className="badge rounded-circle" style="backgroundColor:{this.state.colors" ></span>
+							<span className="color-badge float-right d-inline">{this.props.colors}</span>
 						</Card.Text>
 					</Card.Body>
 				</Card>

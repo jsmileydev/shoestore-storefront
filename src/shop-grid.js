@@ -42,68 +42,6 @@ class ShopGrid extends React.Component {
 							<Tab.Content className="m-5 text-left">
 								<Tab.Pane eventKey="#cat1">
 									<Row>
-										{/*
-										<Col className="w-100 mx-auto my-3" xl={4} lg={6} sm={6}>
-											<Card className="rounded-lg h-100 shadow-sm border-0 mx-auto">
-												<Card.Img
-													variant="top"
-													src={require('./images/horz-mens-dress-dkbrn-sit.jpg')}
-												/>
-												<Badge variant="secondary" className="rounded-circle">
-													<FontAwesomeIcon icon={farHeart} />
-												</Badge>
-												<Card.Body>
-													<Card.Text className="my-1">Cap Toe Lace-up</Card.Text>
-													<small className="text-muted text-sm">Men's Dress Shoe</small>
-													<Card.Text className="my-1">
-														<strike className="text-muted">$150</strike>{' '}
-														<span className="text-info font-weight-bold"> $100</span>
-													</Card.Text>
-												</Card.Body>
-											</Card>
-										</Col>
-
-										<Col className="w-100 mx-auto my-3" xl={4} lg={6} sm={6}>
-											<Card className="rounded-lg shadow-sm border-0 h-100 mx-auto">
-												<Card.Img
-													variant="top"
-													src={require('./images/horz-womens-boot-heel.jpg')}
-												/>
-												<Badge variant="secondary" className="rounded-circle">
-													<FontAwesomeIcon icon={farHeart} />
-												</Badge>
-												<Card.Body>
-													<Card.Text className="my-1">Heeled Ankle Boot</Card.Text>
-													<small className="text-muted text-sm">Women's Boots</small>
-													<Card.Text className="my-1">
-														<strike className="text-muted">$150</strike>{' '}
-														<span className="text-info font-weight-bold"> $100</span>
-													</Card.Text>
-												</Card.Body>
-											</Card>
-										</Col>
-
-										<Col className="w-100 mx-auto my-3" xl={4} lg={6} sm={6}>
-											<Card className="rounded-lg shadow-sm h-100 border-0 mx-auto">
-												<Card.Img
-													variant="top"
-													src={require('./images/horz-mens-boot-brn.jpg')}
-												/>
-												<Badge variant="secondary" className="rounded-circle">
-													<FontAwesomeIcon icon={farHeart} />
-												</Badge>
-												<Card.Body>
-													<Card.Text className="my-1">Ankle Dress Boot</Card.Text>
-													<small className="text-muted text-sm">
-														Men's Boots, Men's Dress Shoes
-													</small>
-													<Card.Text className="my-1">
-														<strike className="text-muted">$150</strike>{' '}
-														<span className="text-info font-weight-bold"> $100</span>
-													</Card.Text>
-												</Card.Body>
-											</Card>
-										</Col>*/}
 										{ProductMap}
 									</Row>
 								</Tab.Pane>
