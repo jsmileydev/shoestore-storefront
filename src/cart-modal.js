@@ -56,7 +56,7 @@ class Cart extends React.Component {
     render() {
         let modalClose = () => this.setState({ modalShow: false});
         return (
-            <ButtonToolbar>
+            <ButtonToolbar className="d-inline">
                 <Button variant="primary" onClick={() => this.setState({ modalShow: true})}>
                     Display Cart
                 </Button>

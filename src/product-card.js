@@ -1,4 +1,5 @@
 import React from 'react';
+import Cart from './cart-modal';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
@@ -19,13 +20,24 @@ class ProductCard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			filled: false
+			filled: false,
+			colors: ''
 		};
 		this.handleLike = this.handleLike.bind(this);
+		this.showColors = this.showColors.bind(this);
 	}
 
 	handleLike() {
 		this.setState({ filled: !this.state.filled });
+	}
+
+	showColors() {
+		for (let index = 0; index < this.props.colors.length; index++) {
+			const element = this.props.colors[index];
+			this.setState({
+				colors: element
+			})
+		}
 	}
 
 	render() {
@@ -34,14 +46,15 @@ class ProductCard extends React.Component {
 				<Card className="rounded-lg h-100 shadow-sm border-0 mx-auto">
 					<div className="product-image">
 						<Card.Img variant="top" src={require(`${this.props.img}`)} alt={this.props.name} />
-						<Heart filled={this.state.filled} onClick={this.handleLike} />
 						<Card.ImgOverlay className="my-auto text-center">
-							<Button variant="secondary" className="mx-1">
-								View
-							</Button>
-							<Button variant="secondary" className="mx-1">
-								Add to Cart
-							</Button>
+							<Heart filled={this.state.filled} onClick={this.handleLike} />
+							{/*}
+							<div className="product-overlay-btn-hover h-100 w-100">
+								<Button variant="outline-dark" className="mx-1 btn-view-product-page d-inline text-dark">
+									View
+								</Button>
+								<Cart />
+							</div>*/}
 						</Card.ImgOverlay>
 					</div>
 					<Card.Body>
@@ -50,6 +63,7 @@ class ProductCard extends React.Component {
 						<Card.Text className="my-1">
 							<strike className="text-muted">{this.props.price}</strike>{' '}
 							<span className="text-primary font-weight-bold"> {this.props.salePrice}</span>
+							<span className="badge rounded-circle" style="backgroundColor:{this.state.colors" ></span>
 						</Card.Text>
 					</Card.Body>
 				</Card>

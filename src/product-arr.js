@@ -26,9 +26,10 @@ var productArr = [
     {
         name: 'Heeled Ankle Boot',
         category: 'Women\'s Boots, Women\'s Heels',
-        id: 201,
+        id: 201401,
         price: '$150',
         salePrice: '$100',
+        colors: ['#000', '#79060a', '#f4b371', '#a6a6a6', '#fff'],
         img: './images/horz-womens-boot-heel.jpg'
     },
     {
@@ -40,12 +41,12 @@ var productArr = [
         img: './images/horz-womens-boot-dkbrn.jpg'
     },
     {
-        name: 'Wool-Lined Loafers',
-        category: 'Women\'s Casual Shoes',
-        id: 401,
+        name: 'Nubuck Chukka Boot',
+        category: 'Men\'s Boots, Women\'s Boots',
+        id: 203303,
         price: '$150',
         salePrice: '$100',
-        img: './images/horz-womens-loafers.jpg'
+        img: './images/horz-mens-boot-ltbrn.jpg'
     }
 ];
 
