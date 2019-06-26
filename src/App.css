@@ -1,6 +1,3 @@
-.App {
-}
-
 #main {
   margin-top: 66px;
   text-align: center;
@@ -19,14 +16,48 @@
   padding: .75rem !important;
 }
 
-.badge {
+.heart.badge {
   position: absolute;
   top: 5px;
   right: 5px;
   font-size: 24px;
 }
 
-.badge:hover {
-  background-color: #000;
+.heart.badge:hover {
+  transition: 0s;
+  background-color: #138496;
 }
 
+.price-text {
+  line-height: 2em;
+}
+
+.cart-btn {
+  z-index: 15;
+}
+
+.color-circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  border: 1px solid #000;
+}
+
+.product-overlay-btn-hover {
+  opacity: 0;
+  padding-top: 50%;
+}
+
+.product-overlay-btn-hover:hover {
+  opacity: 1;
+  transition: .2s ease;
+}
+
+.product-overlay-btn-hover button {
+  opacity: 1;
+}
+
+.dropdown-menu,
+.search-bar {
+  padding: 0;
+}

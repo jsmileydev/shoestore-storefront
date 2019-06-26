@@ -1,6 +1,6 @@
 var productArr = [
     {
-        name: 'Cap Toe Loafer',
+        name: 'Cap Toe Oxford Loafer',
         category: 'Men\'s Dress Shoes',
         id: 101,
         price: '$150',

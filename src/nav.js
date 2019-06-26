@@ -2,49 +2,67 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-export class NavigationBar extends React.Component {
-    render() {
-        return(
-			<header>
-				<Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-					<Navbar.Brand href="#home">
+class NavigationBar extends React.Component {
+	render() {
+		return (
+			<Navbar expand="lg" variant="dark" bg="dark" fixed="top">
+				<Navbar.Brand href="#home">
+					<img
+						src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-running-50(2).png"
+						alt="Running logo"
+						className="d-inline-block align-middle"
+					/>{' '}
+					Serious Shoes
+				</Navbar.Brand>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Collapse id="basic-navbar-nav">
+					<Nav className="mr-auto">
+						<Nav.Link href="#home">Home</Nav.Link>
+						<Nav.Link href="#link">Sales</Nav.Link>
+						<NavDropdown title="Dropdown" id="basic-nav-dropdown">
+							<NavDropdown.Item href="#action/3.1">First Category</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.2">Second</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.3">Third</NavDropdown.Item>
+							<NavDropdown.Divider />
+							<NavDropdown.Item href="#action/3.4">Third</NavDropdown.Item>
+						</NavDropdown>
+					</Nav>
+					<ButtonToolbar className="search-btn">
+						{['left'].map((direction) => (
+							<DropdownButton
+								drop={direction}
+								variant="dark"
+								title={<FontAwesomeIcon icon={faSearch} size="lg" />}
+								id={`dropdown-button-drop-${direction}`}
+								key={direction}
+							>
+								<Dropdown.Item eventKey="1" className="search-bar" ><FormControl type="text" placeholder="Search" className="mr-sm-2 search-drop" /></Dropdown.Item>
+							</DropdownButton>
+						))}
+					</ButtonToolbar>
+					<a className="navbar-brand" href="#cart">
 						<img
-							src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-running-50(2).png"
-							alt="Running logo"
+							src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-shopping-cart-64.png"
+							width="40"
+							alt="Shopping cart icon"
 							className="d-inline-block align-middle"
 						/>
-					</Navbar.Brand>
-					<Navbar.Toggle aria-controls="basic-navbar-nav" />
-					<Navbar.Collapse id="basic-navbar-nav">
-						<Nav className="mr-auto">
-							<Navbar.Link href="#home">Home</Navbar.Link>
-							<Navbar.Link href="#link">Sales</Navbar.Link>
-							<NavDropdown title="Products" id="basic-nav-dropdown">
-								<NavDropdown.Item href="#cat1">First Category</NavDropdown.Item>
-								<NavDropdown.Item href="#cat2">Second Category</NavDropdown.Item>
-								<NavDropdown.Item href="#cat3">Third Category</NavDropdown.Item>
-								<NavDropdown.Item href="#cat4">Fourth Category</NavDropdown.Item>
-							</NavDropdown>
-						</Nav>
-						<Form inline>
-							<FormControl type="text" placeholder="Search" className="mr-sm-2" />
-							<Button variant="info">Search</Button>
-						</Form>
-						<a className="navbar-brand" href="#cart">
-							<img
-								src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-shopping-cart-64.png"
-								width="40"
-								alt="Shopping cart icon"
-								className="d-inline-block align-middle"
-							/>
-						</a>
-					</Navbar.Collapse>
-				</Navbar>
-			</header>
-		)
+					</a>
+					<a className="navbar-brand" href="#">
+						<FontAwesomeIcon icon={faUser} size="lg" />
+					</a>
+				</Navbar.Collapse>
+			</Navbar>
+		);
 	}
 }
+
+export default NavigationBar;

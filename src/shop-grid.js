@@ -15,6 +15,7 @@ class ShopGrid extends React.Component {
 				category={product.category}
 				price={product.price}
 				salePrice={product.salePrice}
+				colors={product.colors}
 				img={product.img}
 			/>
 		));

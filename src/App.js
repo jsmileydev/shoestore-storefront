@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Navbar from './navbar';
+import NavigationBar from './nav';
 import ShopGrid from './shop-grid';
 import Footer from './footer';
 
 function App() {
 	return (
 		<div className="App">
-			<Navbar />
+			<NavigationBar />
 			<ShopGrid />
 			<Footer />
 		</div>
