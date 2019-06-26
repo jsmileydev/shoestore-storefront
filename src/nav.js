@@ -24,15 +24,20 @@ class NavigationBar extends React.Component {
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="mr-auto">
-						<Nav.Link href="#home">Home</Nav.Link>
-						<Nav.Link href="#link">Sales</Nav.Link>
-						<NavDropdown title="Dropdown" id="basic-nav-dropdown">
+					<Nav className="mx-auto">
+						<Nav.Link href="#home" className="px-5 text-uppercase text-white">Home</Nav.Link>
+						<Nav.Link href="#link" className="px-5 text-uppercase text-white">Sales</Nav.Link>
+						<NavDropdown title="Men's" id="basic-nav-dropdown" className="px-5 text-uppercase text-white">
 							<NavDropdown.Item href="#action/3.1">First Category</NavDropdown.Item>
 							<NavDropdown.Item href="#action/3.2">Second</NavDropdown.Item>
 							<NavDropdown.Item href="#action/3.3">Third</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4">Third</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.4">Fourth</NavDropdown.Item>
+						</NavDropdown>
+						<NavDropdown title="Women's" id="basic-nav-dropdown" className="px-5 text-uppercase text-white">
+							<NavDropdown.Item href="#action/3.1">First Category</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.2">Second</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.3">Third</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.4">Fourth</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>
 					<ButtonToolbar className="search-btn">
