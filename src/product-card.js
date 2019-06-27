@@ -62,7 +62,7 @@ class ProductCard extends React.Component {
 							{/*<span className="color-badge float-right d-inline">{this.props.colors}</span>*/}
 							{this.props.colors.map((colors) => {
 								const ColorBg = {backgroundColor: colors};
-								return (<Button variant="outline-dark" className="color-badge float-right d-inline my-2 mx-1" key={colors} style={ColorBg}> </Button>);
+								return (<Button variant="outline-dark" className="color-badge float-right d-inline my-2 mx-1 shadow-none" key={colors} style={ColorBg}> </Button>);
 							})}
 						{/*<Cart
 							name={this.props.name}
