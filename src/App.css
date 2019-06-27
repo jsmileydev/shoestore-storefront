@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Lato&display=swap');
+
+.App {
+  font-family: 'Lato', sans-serif;
+}
+
 #main {
   margin-top: 66px;
   text-align: center;
+}
+
+.navbar-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.6em;
 }
 
 .nav-link {
@@ -8,8 +20,13 @@
   font-size: 1.1rem;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   text-decoration: underline;
+}
+
+.dropdown-menu > a {
+  padding: 1rem;
 }
 
 .tab-content {
@@ -45,11 +62,16 @@
   z-index: 15;
 }
 
-.color-circle {
-  height: 12px;
-  width: 12px;
-  border-radius: 6px;
+.color-badge {
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  border-radius: 8px;
   border: 1px solid #000;
+}
+
+.color-badge:active {
+  border: 1px solid #fff;
 }
 
 .product-overlay-btn-hover {
@@ -67,5 +89,5 @@
 }
 
 .dropdown-menu,.search-bar {
-  padding: 0;
+  padding: 0 !important;
 }

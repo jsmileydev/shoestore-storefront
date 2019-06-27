@@ -6,6 +6,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import ListGroup from 'react-bootstrap/ListGroup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -24,23 +25,39 @@ class NavigationBar extends React.Component {
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="mx-auto">
+					<Nav className="mx-auto text-center">
 						<Nav.Link href="#home" className="px-5 text-uppercase text-white">Home</Nav.Link>
 						<Nav.Link href="#link" className="px-5 text-uppercase text-white">Sales</Nav.Link>
-						<NavDropdown title="Men's" id="basic-nav-dropdown" className="px-5 text-uppercase text-white">
-							<NavDropdown.Item href="#action/3.1">First Category</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.2">Second</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">Third</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.4">Fourth</NavDropdown.Item>
+						<NavDropdown title="MEN'S" id="basic-nav-dropdown" className="px-5 text-white">
+								<ListGroup.Item action href="#cat1">
+									Oxfords
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat2">
+									All Boots
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat3">
+									Oxford Boots
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat4">
+									Chukka Boots
+								</ListGroup.Item>
 						</NavDropdown>
-						<NavDropdown title="Women's" id="basic-nav-dropdown" className="px-5 text-uppercase text-white">
-							<NavDropdown.Item href="#action/3.1">First Category</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.2">Second</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">Third</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.4">Fourth</NavDropdown.Item>
+						<NavDropdown title="WOMEN'S" id="basic-nav-dropdown" className="px-5  text-white">
+								<ListGroup.Item action href="#cat1">
+									All Boots
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat2">
+									Heeled Boots
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat3">
+									Calf-High Boots
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat4">
+									Chukka Boots
+								</ListGroup.Item>
 						</NavDropdown>
 					</Nav>
-					<ButtonToolbar className="search-btn">
+					<ButtonToolbar className="search-btn text-right">
 						{['left'].map((direction) => (
 							<DropdownButton
 								drop={direction}

@@ -5,7 +5,7 @@ var productArr = [
         id: 101,
         price: '$150',
         salePrice: '$100',
-        colors: ['#000', '#79060a', '#f4b371', '#a6a6a6', '#fff'],
+        colors: ['#000', '#79060a'],
         img: './images/horz-mens-dress-dkbrn-sit.jpg'
     },
     {
@@ -14,7 +14,7 @@ var productArr = [
         id: 301,
         price: '$150',
         salePrice: '$100',
-        colors: ['#000', '#79060a', '#f4b371', '#a6a6a6', '#fff'],
+        colors: ['#79060a', '#f4b371'],
         img: './images/horz-mens-boot-brn.jpg'
     },
     {
@@ -23,7 +23,7 @@ var productArr = [
         id: 302,
         price: '$150',
         salePrice: '$100',
-        colors: ['#000', '#79060a', '#f4b371', '#a6a6a6', '#fff'],
+        colors: ['#000', '#79060a', '#f4b371', '#a6a6a6' ],
         img: './images/horz-mens-boot-ltbrn2.jpg'
     },
     {
@@ -32,7 +32,7 @@ var productArr = [
         id: 201401,
         price: '$150',
         salePrice: '$100',
-        colors: ['#000', '#79060a', '#f4b371', '#a6a6a6', '#fff'],
+        colors: ['#000', '#79060a', '#a6a6a6', '#fffff2'],
         img: './images/horz-womens-boot-heel.jpg'
     },
     {
@@ -41,7 +41,7 @@ var productArr = [
         id: 202,
         price: '$150',
         salePrice: '$100',
-        colors: ['#000', '#79060a', '#f4b371', '#a6a6a6', '#fff'],
+        colors: ['#79060a', '#f4b371'],
         img: './images/horz-womens-boot-dkbrn.jpg'
     },
     {
@@ -50,7 +50,7 @@ var productArr = [
         id: 203303,
         price: '$150',
         salePrice: '$100',
-        colors: ['#000', '#79060a', '#f4b371', '#a6a6a6', '#fff'],
+        colors: ['#79060a', '#f4b371'],
         img: './images/horz-mens-boot-ltbrn.jpg'
     }
 ];
