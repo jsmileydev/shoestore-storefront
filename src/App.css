@@ -87,3 +87,14 @@
 .dropdown-menu,.search-bar {
   padding: 0 !important;
 }
+
+.email-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.signup-btn {
+  line-height: 36px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
