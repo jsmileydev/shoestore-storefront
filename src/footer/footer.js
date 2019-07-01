@@ -8,7 +8,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faShippingFast } from '@fortawesome/free-solid-svg-icons';
 
-class FooterBar extends React.Component {
+class Footer extends React.Component {
 	render() {
 		return (
 			<footer>
@@ -55,27 +55,27 @@ class FooterBar extends React.Component {
 							<p className="h6">Follow us on</p>
 							<div className="share-icons mr-2">
 								<img
-									src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-twitter-64.png"
+									src={require("./images/icons8-facebook-64.png")}
 									width="36"
 									alt="Twitter icon"
 								/>
 								<img
-									src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-facebook-64.png"
+									src={require("./images/icons8-twitter-64.png")}
 									width="36"
 									alt="Facebook icon"
 								/>
 								<img
-									src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-instagram-64.png"
+									src={require('./images/icons8-instagram-64.png')}
 									width="36"
 									alt="Instagram icon"
 								/>
 								<img
-									src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-youtube-squared-64.png"
+									src={require("./images/icons8-youtube-64.png")}
 									width="36"
 									alt="Youtube icon"
 								/>
 								<img
-									src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-share-64.png"
+									src={require("./images/icons8-share-64.png")}
 									width="36"
 									alt="Share icon"
 								/>
@@ -106,4 +106,4 @@ class FooterBar extends React.Component {
 	}
 }
 
-export default FooterBar;
+export default Footer;
