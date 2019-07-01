@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Badge from 'react-bootstrap/Badge';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -58,14 +58,14 @@ class QuickView extends React.Component {
 	render() {
 		let modalClose = () => this.setState({ modalShow: false });
 		return (
-			<div className="product-overlay">
+			<Badge variant="secondary" className="product-quickview rounded-circle">
 				<FontAwesomeIcon
 					icon={faSearch}
 					className="product-modal-btn"
 					onClick={() => this.setState({ modalShow: true })}
 				/>
 				<ProductModal show={this.state.modalShow} onHide={modalClose} />
-			</div>
+			</Badge>
 		);
 	}
 }
