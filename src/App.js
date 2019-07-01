@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavigationBar from './nav';
-import ShopGrid from './shop-grid';
+import ShopGrid from './storeMain/shop-grid';
 import FooterBar from './footerbar';
 
 function App() {

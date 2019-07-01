@@ -5,10 +5,7 @@ import Badge from 'react-bootstrap/Badge';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
-import Cart from './cart-modal';
 import Button from 'react-bootstrap/Button';
-
-
 
 
 const Heart = ({ filled, onClick }) => {
@@ -33,9 +30,6 @@ class ProductCard extends React.Component {
 	}
 
 	render() {
-		{/*const ColorChoice = this.props.colors.map((color) => (
-			<span className="color-circle d-inline-block mx-.5" key={color.colors} style={{backgroundColor: `${color.colors}` }} > {color.colors} </span>
-		));*/}
 		
 		return (
 			<Col className="w-100 mx-auto mb-5" xl={4} lg={6} sm={6}>
@@ -59,7 +53,6 @@ class ProductCard extends React.Component {
 						<Card.Text className="my-1 price-text">
 							<strike className="text-muted">{this.props.price}</strike>{' '}
 							<span className="text-primary font-weight-bold"> {this.props.salePrice}</span>
-							{/*<span className="color-badge float-right d-inline">{this.props.colors}</span>*/}
 							{this.props.colors.map((colors) => {
 								const ColorBg = {backgroundColor: colors};
 								return (<Button variant="outline-dark" className="color-badge float-right d-inline my-2 mx-1 shadow-none" key={colors} style={ColorBg}> </Button>);
