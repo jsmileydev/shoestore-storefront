@@ -1,0 +1,19 @@
+.footer-btn {
+    width: 180px;
+    height: 5rem;
+}
+
+.footer-btn svg {
+    margin: 10px;
+}
+
+.email-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .signup-btn {
+    line-height: 36px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
