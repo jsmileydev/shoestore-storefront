@@ -1,15 +1,16 @@
+
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import FormControl from 'react-bootstrap/FormControl';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import FormControl from 'react-bootstrap/FormControl';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class NavigationBar extends React.Component {
 	render() {
@@ -17,7 +18,7 @@ class NavigationBar extends React.Component {
 			<Navbar expand="lg" variant="dark" bg="dark" fixed="top">
 				<Navbar.Brand href="#home">
 					<img
-						src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-running-50(2).png"
+						src={require("./images/icons8-running-50.png")} 
 						alt="Running logo"
 						className="d-inline-block align-middle"
 					/>{' '}
@@ -72,7 +73,7 @@ class NavigationBar extends React.Component {
 					</ButtonToolbar>
 					<a className="navbar-brand" href="#cart">
 						<img
-							src="https://raw.githubusercontent.com/jsmileydev/shoestore/master/Images/icons8-shopping-cart-64.png"
+							src={require("./images/icons8-shopping-cart-64.png")}
 							width="40"
 							alt="Shopping cart icon"
 							className="d-inline-block align-middle"

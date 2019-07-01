@@ -1,4 +1,5 @@
 import React from 'react';
+import './storeMain.css';
 import ProductCard from './product-card';
 import productArr from './product-arr';
 import Row from 'react-bootstrap/Row';
