@@ -1,4 +1,5 @@
 import React from 'react';
+import QuickView from './productModal';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
@@ -6,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
-
 
 const Heart = ({ filled, onClick }) => {
 	return (
@@ -30,14 +30,15 @@ class ProductCard extends React.Component {
 	}
 
 	render() {
-		
 		return (
 			<Col className="w-100 mx-auto mb-5" xl={4} lg={6} sm={6}>
 				<Card className="rounded-lg h-100 shadow-sm border-0 mx-auto">
 					<div className="product-image">
 						<Card.Img variant="top" src={require(`${this.props.img}`)} alt={this.props.name} />
-							<Heart filled={this.state.filled} onClick={this.handleLike} />
-							{/*}
+						<Heart filled={this.state.filled} onClick={this.handleLike} />
+							<QuickView/>
+
+						{/*
 						<Card.ImgOverlay className="my-auto text-center">
 							<div className="product-overlay-btn-hover h-100 w-100">
 								<Button variant="outline-dark" className="mx-1 btn-view-product-page d-inline text-dark">
@@ -54,10 +55,19 @@ class ProductCard extends React.Component {
 							<strike className="text-muted">{this.props.price}</strike>{' '}
 							<span className="text-primary font-weight-bold"> {this.props.salePrice}</span>
 							{this.props.colors.map((colors) => {
-								const ColorBg = {backgroundColor: colors};
-								return (<Button variant="outline-dark" className="color-badge float-right d-inline my-2 mx-1 shadow-none" key={colors} style={ColorBg}> </Button>);
+								const ColorBg = { backgroundColor: colors };
+								return (
+									<Button
+										variant="outline-dark"
+										className="color-badge float-right d-inline my-2 mx-1 shadow-none"
+										key={colors}
+										style={ColorBg}
+									>
+										{' '}
+									</Button>
+								);
 							})}
-						{/*<Cart
+							{/*<Cart
 							name={this.props.name}
 							price={this.props.price}
 						/>*/}

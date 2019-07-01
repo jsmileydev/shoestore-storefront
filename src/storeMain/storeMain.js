@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Tab from 'react-bootstrap/Tab';
 
-class ShopGrid extends React.Component {
+class StoreMain extends React.Component {
 	render() {
 		const ProductMap = productArr.map((product) => (
 			<ProductCard
@@ -65,4 +65,4 @@ class ShopGrid extends React.Component {
 	}
 }
 
-export default ShopGrid;
+export default StoreMain;
