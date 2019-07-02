@@ -17,6 +17,7 @@ class StoreMain extends React.Component {
 				price={product.price}
 				salePrice={product.salePrice}
 				colors={product.colors}
+				sizes={product.sizes}
 				img={product.img}
 			/>
 		));

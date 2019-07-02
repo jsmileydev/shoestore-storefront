@@ -20,7 +20,8 @@ class ProductCard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			filled: false
+			filled: false,
+			product: ''
 		};
 		this.handleLike = this.handleLike.bind(this);
 	}
@@ -36,7 +37,15 @@ class ProductCard extends React.Component {
 					<div className="product-image">
 						<Card.Img variant="top" src={require(`${this.props.img}`)} alt={this.props.name} />
 						<Heart filled={this.state.filled} onClick={this.handleLike} />
-						<QuickView/>
+						<QuickView
+							product={this.props.name}
+							category={this.props.category}
+							price={this.props.price}
+							salePrice={this.props.salePrice}
+							colors={this.props.colors}
+							sizes={this.props.sizes}
+							img={this.props.img}
+						/>
 
 						{/*
 						<QuickView/>
@@ -60,7 +69,7 @@ class ProductCard extends React.Component {
 								return (
 									<Button
 										variant="outline-dark"
-										className="color-badge float-right d-inline my-2 mx-1 shadow-none"
+										className="color-badge float-right d-inline my-2 mx-1  shadow-none"
 										key={colors}
 										style={ColorBg}
 									>
@@ -68,10 +77,6 @@ class ProductCard extends React.Component {
 									</Button>
 								);
 							})}
-							{/*<Cart
-							name={this.props.name}
-							price={this.props.price}
-						/>*/}
 						</Card.Text>
 					</Card.Body>
 				</Card>

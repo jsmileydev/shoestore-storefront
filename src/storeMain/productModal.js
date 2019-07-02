@@ -6,6 +6,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,20 +24,58 @@ class ProductModal extends React.Component {
 		return (
 			<Modal {...this.props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
 				<Modal.Header closeButton>
-					<Modal.Title id="contained-modal-title-vcenter">Your Cart</Modal.Title>
+					<Modal.Title id="contained-modal-title-vcenter">{this.props.product}</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<Container>
 						<Row className="show-grid">
-							<Col md={8}>
-								<p>Product</p>
-								<p>{this.props.name}</p>
+							<Col md={6}>
+								<p>
+									<img
+										src={require(`${this.props.img}`)}
+										alt={this.props.product}
+										className="quickview-product-img"
+									/>
+								</p>
 							</Col>
-							<Col md={4}>
-								<p>Price</p>
-								<p>{this.props.price}</p>
+							<Col md={6}>
+								<Row>
+									<h4>{this.props.product}</h4>
+								</Row>
+								<Row>
+                                    <p>Available Colors</p>
+                                    <p className="d-block ">
+									{this.props.colors.map((colors) => {
+										const ColorBg = { backgroundColor: colors };
+										return (
+											<Button
+												variant="outline-dark"
+												className="color-badge my-2 mx-1"
+												key={colors}
+												style={ColorBg}
+											>
+												{' '}
+											</Button>
+										);
+                                    })}
+                                    </p>
+								</Row>
+								<Row>
+									<ButtonToolbar>
+										<ToggleButtonGroup type="radio" name="options">
+                                            {this.props.sizes.map((sizes) => {
+                                                return (
+                                                    <ToggleButton value={sizes} variant="outline-secondary" className="size-btn">{sizes}</ToggleButton>
+                                                )
+                                            })}
+										</ToggleButtonGroup>
+									</ButtonToolbar>
+								</Row>
 							</Col>
 						</Row>
+                        <Row>
+                            <p>Lorem ipsum</p>
+                        </Row>
 						<Row className="show-grid">
 							<Col md={12} className="text-right">
 								<p>Total</p>
@@ -54,17 +95,31 @@ class QuickView extends React.Component {
 	constructor(...args) {
 		super(...args);
 		this.state = { modalShow: false };
+		this.handleClick = this.handleClick.bind(this);
 	}
+	handleClick() {
+		this.setState({
+			modalShow: true
+		});
+		console.log(this.props.product);
+	}
+
 	render() {
 		let modalClose = () => this.setState({ modalShow: false });
 		return (
 			<Badge variant="secondary" className="product-quickview rounded-circle">
-				<FontAwesomeIcon
-					icon={faSearch}
-					className="product-modal-btn"
-					onClick={() => this.setState({ modalShow: true })}
+				<FontAwesomeIcon icon={faSearch} className="product-modal-btn" onClick={this.handleClick} />
+				<ProductModal
+					onHide={modalClose}
+					show={this.state.modalShow}
+					product={this.props.product}
+					category={this.props.category}
+					price={this.props.price}
+					salePrice={this.props.salePrice}
+                    colors={this.props.colors}
+                    sizes={this.props.sizes}
+					img={this.props.img}
 				/>
-				<ProductModal show={this.state.modalShow} onHide={modalClose} />
 			</Badge>
 		);
 	}
