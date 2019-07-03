@@ -43,39 +43,54 @@ class ProductModal extends React.Component {
 									<h4>{this.props.product}</h4>
 								</Row>
 								<Row>
-                                    <p>Available Colors</p>
-                                    <p className="d-block ">
-									{this.props.colors.map((colors) => {
-										const ColorBg = { backgroundColor: colors };
-										return (
-											<Button
-												variant="outline-dark"
-												className="color-badge my-2 mx-1"
-												key={colors}
-												style={ColorBg}
-											>
-												{' '}
-											</Button>
-										);
-                                    })}
-                                    </p>
-								</Row>
-								<Row>
-									<ButtonToolbar>
-										<ToggleButtonGroup type="radio" name="options">
-                                            {this.props.sizes.map((sizes) => {
-                                                return (
-                                                    <ToggleButton value={sizes} variant="outline-secondary" className="size-btn">{sizes}</ToggleButton>
-                                                )
-                                            })}
-										</ToggleButtonGroup>
-									</ButtonToolbar>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
 								</Row>
 							</Col>
 						</Row>
-                        <Row>
-                            <p>Lorem ipsum</p>
-                        </Row>
+						<Row>
+							<p className="w-100 mb-2">Available Colors</p>
+							<p className="d-block w-100 mb-2">
+							<ButtonToolbar className="w-100">
+								<ToggleButtonGroup type="radio" name="options">
+								{this.props.colors.map((colors) => {
+									const ColorBg = { backgroundColor: colors };
+									return (
+										<ToggleButton
+											value={colors}
+											key={colors}
+											style={ColorBg}
+											variant="outline-dark"
+											className="color-badge quickview-color-btn my-2 mx-1"
+										>
+											{' '}
+										</ToggleButton>
+									);
+								})}
+								</ToggleButtonGroup>
+							</ButtonToolbar>
+							</p>
+						</Row>
+						<Row>
+							<p className="w-100 mb-2">Sizes</p>
+							<p className="w-100 mb-2">
+							<ButtonToolbar className="w-100">
+								<ToggleButtonGroup type="radio" name="options">
+									{this.props.sizes.map((sizes) => {
+										return (
+											<ToggleButton
+												key={sizes}
+												value={sizes}
+												variant="outline-secondary"
+												className="size-btn"
+											>
+												{sizes}
+											</ToggleButton>
+										);
+									})}
+									</ToggleButtonGroup>
+								</ButtonToolbar>
+							</p>
+						</Row>
 						<Row className="show-grid">
 							<Col md={12} className="text-right">
 								<p>Total</p>
@@ -116,8 +131,8 @@ class QuickView extends React.Component {
 					category={this.props.category}
 					price={this.props.price}
 					salePrice={this.props.salePrice}
-                    colors={this.props.colors}
-                    sizes={this.props.sizes}
+					colors={this.props.colors}
+					sizes={this.props.sizes}
 					img={this.props.img}
 				/>
 			</Badge>

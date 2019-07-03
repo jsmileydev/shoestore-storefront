@@ -45,15 +45,33 @@
 }
 
 .color-badge {
-	height: 16px !important;
-	width: 16px !important;
-	border-radius: 8px;
-	border: 1px solid darkgrey;
+	height: 20px !important;
+	width: 20px !important;
+	padding: 0 !important;
+	border-radius: 10px !important;
+	border: 2px solid #fff;
 }
 
 .quickview-product-img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.quickview-color-btn {
+	box-shadow: 0px 0px 0px 1px darkgrey;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show > .btn-outline-dark.dropdown-toggle {
+	box-shadow: 0px 0px 0px 1px #000;
+	border-color: #fff !important;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show > .btn-outline-secondary.dropdown-toggle {
+	box-shadow: none;
+}
+
+quickview-color-btn {
+	
 }
 
 /*
