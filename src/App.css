@@ -27,3 +27,18 @@
 .dropdown-menu,.search-bar {
   padding: 0 !important;
 }
+
+.dropleft {
+  text-align: right;
+}
+
+.search-drop {
+  width: 250px;
+}
+
+@media (max-width: 992px) {
+  .navbar-icon-links {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
