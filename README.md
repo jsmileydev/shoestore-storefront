@@ -2,7 +2,7 @@ Minimalist e-commerce store template bootstrapped with [Create React App](https:
 
 ### Demo: 
 
-[Demo](./src/images/screenshot-7-15-19.png)
+[Demo](https://raw.githubusercontent.com/jsmileydev/shoestore-storefront/master/src/images/screenshot-7-15-19.png)
 
 Example made as a shoe store.
 
