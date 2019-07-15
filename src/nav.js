@@ -15,18 +15,18 @@ class NavigationBar extends React.Component {
 	render() {
 		return (
 			<Navbar expand="lg" variant="dark" bg="dark" fixed="top">
-				<div className="navbar-top">
-					<div className="navbar-toggle float-left mr-2 my-auto">
-						<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<div className=" mx-auto">
+					<div className="navbar-toggle">
+						<Navbar.Brand href="#home" className="text-center mx-auto p-0">
+						<Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-5 float-left"/>
+							<img
+								src={require('./images/icons8-running-50.png')}
+								alt="Running logo"
+								className="d-inline-block navbar-logo"
+							/>{' '}
+							<span className="brand">SERIOUS SHOES</span>
+						</Navbar.Brand>
 					</div>
-					<Navbar.Brand href="#home" className="text-center mx-auto">
-						<img
-							src={require('./images/icons8-running-50.png')}
-							alt="Running logo"
-							className="d-inline-block align-middle"
-						/>{' '}
-						Serious Shoes
-					</Navbar.Brand>
 				</div>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="mx-auto text-center">
@@ -67,30 +67,14 @@ class NavigationBar extends React.Component {
 						<NavDropdown
 							title={<FontAwesomeIcon icon={faSearch} size="lg" className="search-drop-btn text-right" />}
 							id="basic-nav-dropdown"
-							className="px-3 text-white">
-								<ListGroup.Item action href="#search">
-								<FormControl type="text" placeholder="Search" className="mr-sm-2 search-drop" />
-								</ListGroup.Item>
-							</NavDropdown>
+							className="px-3 text-white"
+						>
+							<ListGroup.Item action href="#search" className="p-0">
+								<FormControl type="text" placeholder="Search" className="search-drop w-100" />
+							</ListGroup.Item>
+						</NavDropdown>
 					</Nav>
-				</Navbar.Collapse>
-				<div className="navbar-icon-links">
-					<ButtonToolbar className="search-btn mr-0">
-						{[ 'left' ].map((direction) => (
-							<DropdownButton
-								drop={direction}
-								variant="dark"
-								title={
-									<FontAwesomeIcon icon={faSearch} size="lg" className="search-drop-btn text-right" />
-								}
-								id={`dropdown-button-drop-${direction}`}
-								key={direction}
-							>
-								<Dropdown.Item eventKey="1" className="search-bar">
-									<FormControl type="text" placeholder="Search" className="mr-sm-2 search-drop" />
-								</Dropdown.Item>
-							</DropdownButton>
-						))}
+					<div className="navbar-icon-links">
 						<a className="navbar-brand pt-0" href="#cart">
 							<img
 								src={require('./images/icons8-shopping-cart-64.png')}
@@ -100,10 +84,10 @@ class NavigationBar extends React.Component {
 							/>
 						</a>
 						<a className="navbar-brand" href="#">
-							<FontAwesomeIcon icon={faUser} size="md" />
+							<FontAwesomeIcon icon={faUser} size="lg" />
 						</a>
-					</ButtonToolbar>
-				</div>
+					</div>
+				</Navbar.Collapse>
 			</Navbar>
 		);
 	}

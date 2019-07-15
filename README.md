@@ -1,17 +1,18 @@
 Minimalist e-commerce store template bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and built with [React Bootstrap](https://react-bootstrap.netlify.com/) for re-usability, responsiveness, and accessibility in both style and function. 
 
-### Demo: [netlify link]
+### Demo: 
+![Demo](./images/screenshot-7-15-19.png)
 Example made as a shoe store.
 
 
 ### Features
 ---
 
-Tabbed interface product grid by product category. 
+Tabbed interface product grid. 
 
 Additional products easily added. 
 
-Modals for product quick preview and cart in progress.
+Modals for product quick preview and cart in progress, as well as categories and style continuity with home page.
 
 
 ## Available Scripts

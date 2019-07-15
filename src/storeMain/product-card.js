@@ -69,7 +69,7 @@ class ProductCard extends React.Component {
 								return (
 									<Button
 										variant="outline-dark"
-										className="color-badge float-right d-inline my-2 mx-1  shadow-none"
+										className="color-badge float-right text-right d-inline my-2 mx-1  shadow-none"
 										key={colors}
 										style={ColorBg}
 									>

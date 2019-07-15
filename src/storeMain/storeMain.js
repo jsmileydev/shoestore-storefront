@@ -28,16 +28,34 @@ class StoreMain extends React.Component {
 						<Col xl={2} md={3} sm={12} className="p-0 bg-light">
 							<ListGroup variant={'flush'} className="my-5">
 								<ListGroup.Item action href="#cat1" className="px-0">
-									Oxfords
+									Men's
 								</ListGroup.Item>
 								<ListGroup.Item action href="#cat2" className="px-0">
-									All Boots
+									Women's
+								</ListGroup.Item>
+								<ListGroup.Item href="" className="px-0 list-break">
+									&nbsp;
 								</ListGroup.Item>
 								<ListGroup.Item action href="#cat3" className="px-0">
-									Chukkas
+									Oxfords
 								</ListGroup.Item>
 								<ListGroup.Item action href="#cat4" className="px-0">
+									All Boots
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat5" className="px-0">
+									Chukkas
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat6" className="px-0">
 									Heeled Boots
+								</ListGroup.Item>
+								<ListGroup.Item href="" className="px-0 list-break">
+									&nbsp;
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat7" className="px-0">
+									By Price
+								</ListGroup.Item>
+								<ListGroup.Item action href="#cat8" className="px-0">
+									By Size
 								</ListGroup.Item>
 							</ListGroup>
 						</Col>
