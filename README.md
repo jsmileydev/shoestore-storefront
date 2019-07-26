@@ -1,7 +1,9 @@
 Minimalist e-commerce store template bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and built with [React Bootstrap](https://react-bootstrap.netlify.com/) for re-usability, responsiveness, and accessibility in both style and function. 
 
 ### Demo: 
-![Demo](./src/images/screenshot-7-15-19.png)
+
+[Screenshot](./src/images/screenshot-7-15-19.png)
+
 Example made as a shoe store.
 
 
