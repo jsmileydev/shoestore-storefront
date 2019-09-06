@@ -69,7 +69,7 @@ class ProductCard extends React.Component {
 						<small className="text-muted text-sm">{this.props.category}</small>
 						<Card.Text className="my-1 price-text">
 							<strike className="text-muted">{this.props.price}</strike>{' '}
-							<span className="text-primary font-weight-bold"> {this.props.salePrice}</span>
+							<span className="text-info font-weight-bold"> {this.props.salePrice}</span>
 							{this.props.colors.map((colors) => {
 								const ColorBg = { backgroundColor: colors };
 								return (
