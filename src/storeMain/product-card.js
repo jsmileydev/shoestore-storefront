@@ -9,9 +9,15 @@ import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 
 const Heart = ({ filled, onClick }) => {
+	const blueBg = {
+		"background-color" : "#138496"
+	};
+	const greyBg = {
+		"background-color" : "#6c757d"
+	};
 	return (
-		<Badge variant="secondary" className="heart rounded-circle" onClick={onClick}>
-			<FontAwesomeIcon icon={filled ? fasHeart : farHeart} />
+		<Badge variant="secondary" className="heart rounded-circle" onClick={onClick} style={filled ? blueBg : greyBg} >
+			<FontAwesomeIcon icon={filled ? fasHeart : farHeart}  />
 		</Badge>
 	);
 };
