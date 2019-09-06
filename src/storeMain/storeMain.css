@@ -92,40 +92,5 @@
 	        box-shadow: none;
 }
 
-quickview-color-btn {
-	
-}
+/* QUICKVIEW MODAL */
 
-/*
-.product-overlay {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	opacity: 0;
-	background-color: #000;
-}
-
-.product-overlay-btn {
-	position: absolute;
-	bottom: 5px;
-	right: 5px;
-}
-
-.product-image:hover .product-overlay {
-	opacity: .5;
-}
-
-  .product-overlay-btn-hover {
-    opacity: 0;
-    padding-top: 50%;
-  }
-  
-  .product-overlay-btn-hover:hover {
-    opacity: 1;
-    transition: .2s ease;
-  }
-  
-  .product-overlay-btn-hover button {
-    opacity: 1;
-  }*/
