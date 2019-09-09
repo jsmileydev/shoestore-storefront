@@ -24,82 +24,86 @@ class ProductModal extends React.Component {
 		return (
 			<Modal {...this.props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
 				<Modal.Header closeButton>
-					<Modal.Title id="contained-modal-title-vcenter">{this.props.product}</Modal.Title>
+					<Modal.Title id="contained-modal-title-vcenter" className="px-3">{this.props.product}</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<Container>
 						<Row className="quickview-main-row">
-							<Col md={6}>
-								<p>
-									<img
-										src={require(`${this.props.img}`)}
-										alt={this.props.product}
-										className="quickview-product-img"
-									/>
-								</p>
-							</Col>
-							<Col md={6}>
+							<Col md={5} className="mx-3">
 								<Row>
-									<h4>{this.props.product}</h4>
+									<p>
+										<img
+											src={require(`${this.props.img}`)}
+											alt={this.props.product}
+											className="quickview-product-img"
+										/>
+									</p>
 								</Row>
-								<Row>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+								<Row className="quickview-product-link" >
+									<p><a href="" alt="Full product page">VIEW FULL PRODUCT DETAILS >></a></p>
 								</Row>
 							</Col>
-						</Row>
-						<Row className="quickview-options-row">
-							<p className="w-100 mb-2">Available Colors</p>
-							<p className="d-block w-100 mb-2">
-								<ButtonToolbar className="w-100">
-									<ToggleButtonGroup type="radio" name="options">
-									{this.props.colors.map((colors) => {
-										const ColorBg = { backgroundColor: colors };
-										return (
-											<ToggleButton
-												value={colors}
-												key={colors}
-												style={ColorBg}
-												variant="outline-dark"
-												className="color-badge quickview-color-btn my-2 mx-1"
-											>
-												{' '}
-											</ToggleButton>
-										);
-									})}
-									</ToggleButtonGroup>
-								</ButtonToolbar>
-							</p>
-						</Row>
-						<Row className="quickview-options-row">
-							<p className="w-100 mb-2">Sizes</p>
-							<p className="w-100 mb-2">
-								<ButtonToolbar className="w-100">
-									<ToggleButtonGroup type="radio" name="options">
-										{this.props.sizes.map((sizes) => {
-											return (
-												<ToggleButton
-													key={sizes}
-													value={sizes}
-													variant="outline-secondary"
-													className="size-btn"
-												>
-													{sizes}
-												</ToggleButton>
-											);
-										})}
-									</ToggleButtonGroup>
-								</ButtonToolbar>
-							</p>
-						</Row>
-						<Row className="show-grid">
-							<Col md={12} className="text-right">
-								<p>Total</p>
+							<Col md={5} className="mx-3">						
+								<Row className="quickview-options-row">
+									<p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+								</Row>
+								<Row className="quickview-options-row mt-3">
+									<p ><strike className="text-muted">{this.props.price}</strike>{' '}
+									<span className="text-info font-weight-bold"> {this.props.salePrice}</span></p>
+								</Row>
+								<Row className="quickview-options-row mt-3">
+									<p >Available Colors</p>
+									<p className="d-block mx-2">
+										<ButtonToolbar >
+											<ToggleButtonGroup type="radio" name="options">
+											{this.props.colors.map((colors) => {
+												const ColorBg = { backgroundColor: colors };
+												return (
+													<ToggleButton
+														value={colors}
+														key={colors}
+														style={ColorBg}
+														variant="outline-dark"
+														className="color-badge quickview-color-btn m-1"
+													>
+														{' '}
+													</ToggleButton>
+												);
+											})}
+											</ToggleButtonGroup>
+										</ButtonToolbar>
+									</p>
+								</Row>
+								<Row className="quickview-options-row mt-3">
+									<p >Sizes</p>
+									<p className="mx-2">
+										<ButtonToolbar >
+											<ToggleButtonGroup type="radio" name="options">
+												{this.props.sizes.map((sizes) => {
+													return (
+														<ToggleButton
+															key={sizes}
+															value={sizes}
+															variant="outline-secondary"
+															className="size-btn"
+														>
+															{sizes}
+														</ToggleButton>
+													);
+												})}
+											</ToggleButtonGroup>
+										</ButtonToolbar>
+									</p>
+								</Row>						
+								<Row className="quickview-options-row mt-3">
+									<Button variant="info">Add to Cart</Button>
+								</Row>								
 							</Col>
 						</Row>
 					</Container>
 				</Modal.Body>
 				<Modal.Footer>
-					<Button onClick={this.props.onHide}>Close</Button>
+					<Button onClick={this.props.onHide} variant="info">Close</Button>
 				</Modal.Footer>
 			</Modal>
 		);
