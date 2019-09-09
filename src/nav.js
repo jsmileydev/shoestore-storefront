@@ -65,16 +65,16 @@ class NavigationBar extends React.Component {
 							</ListGroup.Item>
 						</NavDropdown>
 						<NavDropdown
-							title={<FontAwesomeIcon icon={faSearch} size="lg" className="search-drop-btn text-right" />}
+							title={ <FontAwesomeIcon icon={faSearch} size="lg" className="search-drop-btn text-right" />}
 							id="basic-nav-dropdown"
 							className="px-3 text-white"
 						>
 							<ListGroup.Item action href="#search" className="p-0">
-								<FormControl type="text" placeholder="Search" className="search-drop w-100" />
+								<FormControl type="text" placeholder="Search" className="search-drop w-150" />
 							</ListGroup.Item>
 						</NavDropdown>
 					</Nav>
-					<div className="navbar-icon-links">
+					<div className="navbar-icon-links text-center">
 						<a className="navbar-brand pt-0" href="#cart">
 							<img
 								src={require('./images/icons8-shopping-cart-64.png')}
