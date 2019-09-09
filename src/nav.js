@@ -1,7 +1,4 @@
 import React from 'react';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import FormControl from 'react-bootstrap/FormControl';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Nav from 'react-bootstrap/Nav';
