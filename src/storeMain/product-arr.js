@@ -51,7 +51,7 @@ var productArr = [
     },
     {
         name: 'Nubuck Chukka Boot',
-        category: 'Men\'s Boots, Women\'s Boots',
+        category: 'Men\'s Boots, Women\'s Boots, Chukka',
         id: 203303,
         price: '$150',
         salePrice: '$120',
