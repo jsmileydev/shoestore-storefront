@@ -14,7 +14,7 @@ var productArr = [
         category: 'Men\'s Boots, Men\'s Dress Shoes',
         id: 301,
         price: '$175',
-        salePrice: '$100',
+        salePrice: null,
         colors: ['#79060a', '#f4b371'],
         sizes: ['7','8','9','10','11','12'],
         img: './images/horz-mens-boot-brn.jpg'
