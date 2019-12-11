@@ -1,5 +1,5 @@
 import React from 'react';
-import './storeMain.css';
+import './storeMain/storeMain.css';
 import Modal from 'react-bootstrap/Modal';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

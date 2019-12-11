@@ -30,11 +30,11 @@ class Footer extends React.Component {
 					</Row>
 					<Row>
 						<Col sm={10} md={6} className="mx-auto">
-							<Form className="signup m-5">
+							<Form className="signup mx-5 mb-5 mt-0">
 								<Form.Row className="align-items-end">
 									<Col className="px-0" sm={8}>
 										<Form.Group as={Col} controlId="formGridEmail" className="p-0 mb-0">
-											<Form.Label>Sign up for sales and updates!</Form.Label>
+											<Form.Label className="my-2">Sign up for sales and updates!</Form.Label>
 											<Form.Control
 												type="email"
 												placeholder="Enter email address"
@@ -55,7 +55,7 @@ class Footer extends React.Component {
 							</Form>
 						</Col>
 						<Col sm={10} md={6} >
-							<div className="social-links text-center m-5">
+							<div className="social-links text-center mx-5 mb-5 mt-0">
 								<p className="h6">Follow us on</p>
 								<div className="share-icons mr-2">
 									<img
