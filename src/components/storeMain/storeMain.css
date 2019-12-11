@@ -1,3 +1,9 @@
+@media (max-width: 767.98px) {
+	.list-group {
+		display: none;
+	}
+}
+
 #main {
 	margin-top: 66px;
 	text-align: center;

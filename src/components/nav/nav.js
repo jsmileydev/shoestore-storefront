@@ -35,7 +35,7 @@ class NavigationBar extends React.Component {
 							Sales
 						</Nav.Link>
 						<NavDropdown title="MEN'S" id="basic-nav-dropdown" className="px-3 text-white">
-							<ListGroup.Item action href="#cat1">
+							<ListGroup.Item action href="#cat4">
 								Oxfords
 							</ListGroup.Item>
 							<ListGroup.Item action href="#cat2">
@@ -44,7 +44,7 @@ class NavigationBar extends React.Component {
 							<ListGroup.Item action href="#cat3">
 								Oxford Boots
 							</ListGroup.Item>
-							<ListGroup.Item action href="#cat4">
+							<ListGroup.Item action href="#cat6">
 								Chukka Boots
 							</ListGroup.Item>
 						</NavDropdown>

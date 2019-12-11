@@ -16,6 +16,8 @@ Additional products easily added.
 
 Modals for product quick preview and cart in progress, as well as categories and style continuity with home page.
 
+Todo: Link navbar dropdown links to main tab categories
+
 
 ## Available Scripts
 ---
