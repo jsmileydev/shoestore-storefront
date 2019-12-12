@@ -21,7 +21,7 @@ class StoreMain extends React.Component {
 	render() {
 		return (
 			<main>
-				<Tab.Container fluid={true} id="tab-container" defaultActiveKey="#cat1" activeKey={this.state.key}>
+				<Tab.Container fluid={true} id="tab-container" defaultActiveKey="#cat1">
 					<Row id="main" className="w-100 mx-auto">
 						<Col xl={2} md={3} sm={12} className="p-0 bg-light">
 							<ListGroup variant={'flush'} className="my-5">
